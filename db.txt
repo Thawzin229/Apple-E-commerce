@@ -1,0 +1,46 @@
+#user
+id | google_id | fb_id | name | email | gender | address | phnumber | role->df('user') | image | password | date |
+
+#admin
+id | name | eamil | google_id | gitHub_id | image | phnumber | role->df('admin')
+
+#member aka partner
+id | name | image | email | phnumber | career
+
+#author
+id | name | bio | gender | phnumber | 
+
+#genre
+id | name | date|
+
+#product - Book
+id | ISBN | title | size | color | name | genre_id |image| description | stock_qantity | price | author_id | published_date
+
+#wishlist
+id | user_id | product_id
+
+#viewcount
+id | user_id | product_id
+
+#carts
+id | user_id | product_id | quantity | totalprice(sigelproduct)
+
+#comment or reviews
+id | user_id | product_id | email | name | comment| image
+
+#contact us 
+id | name | email | message |
+
+#about us -> optional
+id | backstroy |blogs
+
+#orderDetail list
+id | user_id | product_id | quantity | subtotalprice |order_code | status(pending,delivered,cancel)->df('1') | *1 = pending.
+
+#Proceed to order
+id | user_id | order_code | totalprice(overall products)| status(pending,delivered,cancel)->df('1')
+
+#local-shipping
+user_id | order_code | email | phnumber | ordrer_note | City | state | Compelete_address | payment_method('cash on_deli')
+
+
