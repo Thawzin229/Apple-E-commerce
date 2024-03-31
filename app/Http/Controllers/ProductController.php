@@ -142,6 +142,8 @@ class ProductController extends Controller
         //validation
         $this->validation($data);
         $finalData = $this->indirectData($data);
+        $filename = $this->uploadImage($data);
+        $finalData['image'] = $filename;
         Product::create($finalData);
         if($finalData['category_id'] === '1'){
             return redirect()->route('admin#iphoneproductpage');
@@ -155,7 +157,6 @@ class ProductController extends Controller
             if($finalData['category_id'] === '4'){
                 return redirect()->route('admin#watchpage');
             }
-            return "success";
             return redirect()->route('admin#homepage');
     }
 
