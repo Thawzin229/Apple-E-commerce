@@ -120,4 +120,3 @@
         newinputType === "text" ? $("#showpass").find("i").attr("class","zmdi zmdi-eye") : $("#showpass").find("i").attr("class","zmdi zmdi-eye-off");
     })
 </script>
-@endsection
